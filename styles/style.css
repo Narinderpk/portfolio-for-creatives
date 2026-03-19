@@ -693,9 +693,12 @@ a.nav-link-primary:hover {
 .hero {
   width: 100%;
   min-height: 80vh;
-  background: linear-gradient(180deg, #fff7fb 0%, #ffeaf3 100%);
   display: flex;
   flex-direction: column;
+  background-image: url("../assets/MY\ PORTFOLIO\ BACKGROUND.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
