@@ -1727,18 +1727,18 @@ body.work-page {
 .clean-logo {
   width: 3rem;
   height: 3rem;
-  border-radius: 999px;
+  border-radius: 62.438rem;
   display: grid;
   place-items: center;
   background: var(--soft-pill);
-  border: 1px solid var(--soft-border);
+  border: 0.063rem solid var(--soft-border);
   color: var(--soft-text);
   font-size: 1.2rem;
   transition: 0.25s ease;
 }
 
 .clean-logo:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.063rem);
 }
 
 .clean-nav-links {
@@ -1746,15 +1746,15 @@ body.work-page {
   align-items: center;
   gap: 0.35rem;
   background: var(--soft-pill);
-  border: 1px solid var(--soft-border);
-  border-radius: 999px;
+  border: 0.063rem solid var(--soft-border);
+  border-radius: 62.438rem;
   padding: 0.35rem;
 }
 
 .clean-nav-link {
   display: inline-block;
   padding: 0.8rem 1.15rem;
-  border-radius: 999px;
+  border-radius: 62.438rem;
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   color: var(--soft-text) !important;
@@ -1788,7 +1788,7 @@ body.work-page {
 }
 
 .clean-hero-photo {
-  width: min(320px, 78vw);
+  width: min(16.667vw, 78vw);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 2rem;
@@ -1801,7 +1801,7 @@ body.work-page {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 40vw) {
   .clean-nav {
     flex-direction: column;
   }
@@ -1826,7 +1826,7 @@ body.work-page {
    ========================= */
 
 .clean-hero-split {
-  width: min(1200px, 92%);
+  width: min(62.5vw, 92%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -1875,15 +1875,15 @@ body.work-page {
 }
 
 .clean-hero-photo {
-  width: min(380px, 100%);
+  width: min(23.75rem, 100%);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 2rem;
   display: block;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .clean-hero-split {
     grid-template-columns: 1fr;
     gap: 2.5rem;
