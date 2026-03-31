@@ -1902,3 +1902,132 @@ body.work-page {
     max-width: 32ch;
   }
 }
+/* =========================
+   ABOUT PAGE REDESIGN
+   ========================= */
+
+body.about-page {
+  background: #f6eff2;
+}
+
+.about-hero-section {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+}
+
+.about-page-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.about-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #6c6367;
+  margin-bottom: 1rem;
+}
+
+.about-page-title {
+  font-family: "Eczar", serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-page-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5d5558;
+  max-width: 38ch;
+  margin: 0 auto;
+}
+
+.about-feature-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  background: #f8ddea;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+}
+
+.about-feature-image {
+  background: #f3cfe0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-feature-image img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  display: block;
+}
+
+.about-feature-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-mini-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: #9f6f86;
+  margin-bottom: 1rem;
+}
+
+.about-feature-title {
+  font-family: "Eczar", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  color: #222;
+  font-style: italic;
+}
+
+.about-feature-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #4f474a;
+  margin-bottom: 1rem;
+}
+
+.about-soft-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.about-soft-tags span {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #ebc7d7;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: #5a5155;
+}
+
+@media (max-width: 900px) {
+  .about-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-feature-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-feature-image {
+    padding: 1.5rem 1.5rem 0;
+  }
+}
