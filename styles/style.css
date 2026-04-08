@@ -206,7 +206,7 @@
 
 /* ------------------------------- */
 /* 📱 Responsive Design for Small Devices (Portrait Phones) */
-/* No media query needed for small devices like phones under 576px. This is the default in Bootstrap. */
+/* No media query needed for small devices like phones under 36rem. This is the default in Bootstrap. */
 /* ------------------------------- */
 
 /* Add border-box sizing to make layout easier and enable smooth scrolling behavior */
@@ -296,7 +296,7 @@ svg {
 
 /* Adds a dashed border to help you see the box while you're designing */
 .border {
-  border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
+  border: 0.063rem dashed var(--color-accent-primary); /* This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
 }
 
@@ -620,7 +620,7 @@ a:hover {
 
 /* Focus — when a link is focused (keyboard navigation) */
 a:focus {
-  outline: 1px solid var(--color-accent-primary);
+  outline: 0.063rem solid var(--color-accent-primary);
 }
 
 /* Active — when the link is actively being clicked or tapped */
@@ -664,13 +664,13 @@ a.nav-link-primary:hover {
 
 .stroke:link,
 .stroke:visited {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 0.125rem;
   -webkit-text-stroke-color: var(--color-nav-arrow-stroke);
 }
 
 .stroke:active,
 .stroke:hover {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 0.125rem;
   -webkit-text-stroke-color: var(--color-nav-arrow-stroke-hover);
 }
 
@@ -857,7 +857,7 @@ a.nav-link-primary:hover {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(300px, 1fr)
+    minmax(18.75rem, 1fr)
   ); /* Creates a responsive grid */
   grid-gap: 1rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
@@ -1498,7 +1498,7 @@ to keep your styles reusable and consistent.
   /* Work Page Grid for Large Devices */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 1rem;
   }
 
@@ -1650,23 +1650,23 @@ to keep your styles reusable and consistent.
   }
 }
 
-/* X-Large devices (large desktops, 1200px and up)*/
+/* X-Large devices (large desktops, 75rem and up)*/
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   /* TODO: Add styles here for X-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 
-/* XX-Large devices (larger desktops, 1400px and up) */
+/* XX-Large devices (larger desktops, 87.5rem and up) */
 
-@media (min-width: 1400px) {
+@media (min-width: 87.5rem) {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
   }
 }
 
@@ -1911,14 +1911,14 @@ body.about-page {
 }
 
 .about-hero-section {
-  width: min(1200px, 92%);
+  width: min(75rem, 92%);
   margin: 0 auto;
   padding: 4rem 0 6rem;
 }
 
 .about-page-intro {
   text-align: center;
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto 3rem;
 }
 
@@ -1948,15 +1948,15 @@ body.about-page {
 .about-feature-card {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  background: #f8ddea;
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+  gap: 3rem;
+  align-items: center;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
-
 .about-feature-image {
-  background: #f3cfe0;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1964,15 +1964,14 @@ body.about-page {
 
 .about-feature-image img {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  max-width: 26.25rem;
+  height: auto;
+  object-fit: contain;
   border-radius: 1.5rem;
   display: block;
 }
-
 .about-feature-content {
-  padding: 3rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2010,15 +2009,15 @@ body.about-page {
 
 .about-soft-tags span {
   background: rgba(255, 255, 255, 0.65);
-  border: 1px solid #ebc7d7;
+  border: 0.063rem solid #ebc7d7;
   padding: 0.65rem 1rem;
-  border-radius: 999px;
+  border-radius: 62.438rem;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   color: #5a5155;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .about-feature-card {
     grid-template-columns: 1fr;
   }
@@ -2036,23 +2035,23 @@ body.about-page {
    ========================= */
 
 .home-about-preview {
-  width: min(1200px, 92%);
+  width: min(75rem, 92%);
   margin: 5rem auto 6rem;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 2.5rem;
   align-items: center;
   background: #f8f3f5;
-  border: 1px solid #eadde2;
+  border: 0.063rem solid #eadde2;
   border-radius: 2rem;
   padding: 2rem;
 }
 
 .home-about-preview-image img {
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  max-width: 22.5rem;
+  height: auto;
+  object-fit: contain;
   border-radius: 1.5rem;
   display: block;
   margin: 0 auto;
@@ -2092,7 +2091,7 @@ body.about-page {
   width: fit-content;
   margin-top: 0.5rem;
   padding: 0.9rem 1.3rem;
-  border: 1px solid #d8c8cf;
+  border: 0.063rem solid #d8c8cf;
   border-radius: 999px;
   background: #fff;
   color: #222 !important;
@@ -2102,11 +2101,11 @@ body.about-page {
 }
 
 .home-about-button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-0.063rem);
   background: #f5e9ee;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .home-about-preview {
     grid-template-columns: 1fr;
     text-align: center;
