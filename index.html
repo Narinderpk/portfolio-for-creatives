@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>
-      Free Creative Portfolio Template: October 2025 Version | Holding Page
-    </title>
+    <title>Narinderpreet Kaur - Portfolio</title>
     <meta
       name="description"
       content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!"
     />
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="10; url=work.html" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -44,18 +42,8 @@
     </div>
 
     <div class="noise-overlay"></div>
+
     <div class="holding-page-wrapper">
-      <div class="holding-page-inner-container">
-        <a href="work.html">
-          <figure class="holding-page-animation">
-            <img
-              src="assets/branding-images/logo.svg"
-              alt="Your portfolio logo"
-            />
-          </figure>
-          <h1 class="holding-page-title">Portfolio Launching Soon</h1>
-        </a>
-      </div>
       <div class="holding-page-inner-container">
         <div class="sparkles" aria-hidden="true">
           <span class="sparkle s1"></span>
@@ -73,10 +61,8 @@
         </div>
 
         <a href="work.html" class="holding-page-link">
-          <figure class="holding-page-animation">
-            <div class="holding-page-heart">
-              <i class="fa-solid fa-heart"></i>
-            </div>
+          <figure class="holding-page-animation" aria-hidden="true">
+            <i class="fa-solid fa-heart"></i>
           </figure>
           <h1 class="holding-page-title">Something Beautiful is Loading</h1>
         </a>
@@ -84,14 +70,19 @@
 
       <div class="holding-page-footer">
         <p class="holding-page-copyright">
-          &copy; <span id="copyright-years">2026-</span>. Crafted by Narinder.
+          &copy; <span id="copyright-years">2026</span>. Crafted by Narinder.
         </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
       </div>
     </div>
     <script src="./js/interactive-blobs.js"></script>
+    <script>
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = "work.html";
+        }, 800);
+      }, 4000); // change time here (4 seconds now)
+    </script>
   </body>
 </html>
