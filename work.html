@@ -11,12 +11,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="assets/branding-images/favicon.svg"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/branding-images/favicon.png"
+      href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="42">♥</text></svg>'
     />
     <meta property="og:image" content="screenshot.jpg" />
     <link
@@ -39,15 +34,26 @@
         <nav class="clean-nav">
           <a href="work.html" class="clean-logo" aria-label="Homepage">♥</a>
 
-          <div class="clean-nav-links">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="clean-nav-links" id="mobile-menu">
             <a href="work.html" class="clean-nav-link active">HOME</a>
-            <a href="work.html" class="clean-nav-link">PROJECTS</a>
+            <a href="#projects" class="clean-nav-link">PROJECTS</a>
             <a href="about.html" class="clean-nav-link">ABOUT</a>
             <a href="#contact" class="clean-nav-link">CONTACT</a>
           </div>
         </nav>
       </header>
-
       <div class="hero-headline-wrapper clean-hero-content clean-hero-split">
         <div class="clean-hero-text">
           <p class="hero-role-line">
@@ -73,7 +79,7 @@
     </section>
 
     <main class="main-work-section">
-      <section class="projects-editorial">
+      <section class="projects-editorial" id="projects">
         <!-- PROJECT 1 -->
         <div class="project-row">
           <div class="project-text">
@@ -165,7 +171,7 @@
       </div>
     </section>
 
-    <ul class="footer-global">
+    <ul class="footer-global" id="contact">
       <li class="footer-contact-social">
         <h2>Let's Connect</h2>
 
@@ -223,6 +229,18 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
+    </script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector("#mobile-menu");
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
+          const isOpen = mobileMenu.classList.contains("open");
+          menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
     </script>
   </body>
 </html>
