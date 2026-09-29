@@ -2947,3 +2947,32 @@ img,
       6 4,
     auto;
 }
+/* =========================
+   PROJECT 3 CASE STUDY
+   ========================= */
+
+body.project-3 {
+  background: #f5edf1;
+  color: #222;
+}
+
+/* Keeps tall phone screenshots from becoming huge */
+body.project-3 .project-case-image-grid img {
+  max-height: 46rem;
+  object-fit: contain;
+  background: #000;
+}
+/* =========================
+   PROJECT 4 CASE STUDY
+   ========================= */
+
+body.project-4 {
+  background: #f5edf1;
+  color: #222;
+}
+
+/* Keeps tall phone screenshots from becoming huge */
+body.project-4 .project-case-image-grid img {
+  max-height: 46rem;
+  object-fit: contain;
+}
