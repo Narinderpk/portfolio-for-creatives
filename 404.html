@@ -76,50 +76,38 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: min(var(--bubble-size), 28vw);
+        width: min(var(--bubble-size), 34vw);
         aspect-ratio: 1;
-        border: 1px solid rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.62);
         border-radius: 50%;
         background:
-          radial-gradient(
-            ellipse at 31% 22%,
-            rgba(255, 255, 255, 0.92) 0%,
-            rgba(255, 255, 255, 0.42) 5%,
-            transparent 21%
-          ),
-          radial-gradient(
-            ellipse at 75% 76%,
-            rgba(118, 197, 231, 0.1) 0%,
-            transparent 40%
-          ),
-          radial-gradient(
-            ellipse at 24% 77%,
-            rgba(237, 157, 213, 0.12) 0%,
-            transparent 42%
-          ),
-          radial-gradient(
-            circle at 50% 50%,
-            rgba(255, 255, 255, 0) 48%,
-            rgba(255, 255, 255, 0.3) 72%,
-            rgba(255, 255, 255, 0.78) 96%,
-            rgba(255, 255, 255, 0.45) 100%
-          ),
-          conic-gradient(
-            from var(--bubble-rotation),
-            rgba(255, 255, 255, 0.66),
-            rgba(178, 226, 255, 0.38) 15%,
-            rgba(226, 188, 255, 0.4) 30%,
-            rgba(255, 218, 177, 0.42) 45%,
-            rgba(202, 245, 232, 0.42) 61%,
-            rgba(255, 255, 255, 0.68) 78%,
-            rgba(185, 217, 255, 0.4) 90%,
-            rgba(255, 255, 255, 0.66)
+        radial-gradient(
+          ellipse at 31% 22%,
+          rgba(255, 255, 255, 0.72) 0%,
+          rgba(255, 255, 255, 0.28) 4%,
+          transparent 19%
+        ),
+        radial-gradient(
+          ellipse at 75% 76%,
+          rgba(153, 217, 240, 0.15) 0%,
+          transparent 32%
+        ),
+        radial-gradient(
+          ellipse at 24% 77%,
+          rgba(225, 165, 220, 0.15) 0%,
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          transparent 57%,
+          rgba(255, 255, 255, 0.07) 69%,
+          rgba(255, 255, 255, 0.24) 95%,
+          rgba(255, 255, 255, 0.06) 100%
         );
         box-shadow:
-          inset 0 0 0 1px rgba(255, 255, 255, 0.66),
-          inset -0.65rem -0.9rem 1.2rem rgba(143, 178, 219, 0.12),
-          inset 0.5rem 0.5rem 1rem rgba(255, 255, 255, 0.24),
-          0 0.5rem 1.5rem rgba(111, 132, 165, 0.1);
+        inset 0 0 0 1px rgba(255, 255, 255, 0.38),
+        inset -0.65rem -0.9rem 1.2rem rgba(131, 169, 207, 0.1),
+        0 0.45rem 1.4rem rgba(102, 123, 158, 0.12);
         opacity: 0;
         will-change: transform;
       }
@@ -132,23 +120,46 @@
       }
 
       .bubble::before {
-        top: 15%;
-        left: 19%;
-        width: 27%;
-        height: 11%;
+        inset: 0;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.76);
-        filter: blur(1px);
-        transform: rotate(-32deg);
+        background: conic-gradient(
+          from var(--bubble-rotation),
+          rgba(255, 255, 255, 0.42),
+          rgba(164, 220, 255, 0.3) 14%,
+          rgba(213, 182, 255, 0.32) 29%,
+          rgba(255, 218, 180, 0.3) 44%,
+          rgba(177, 238, 225, 0.32) 60%,
+          rgba(255, 255, 255, 0.45) 76%,
+          rgba(181, 211, 255, 0.3) 90%,
+          rgba(255, 255, 255, 0.42)
+        );
+        -webkit-mask: radial-gradient(
+          farthest-side,
+          transparent calc(100% - 0.55rem),
+          #000 calc(100% - 0.3rem)
+        );
+        mask: radial-gradient(
+          farthest-side,
+          transparent calc(100% - 0.55rem),
+          #000 calc(100% - 0.3rem)
+        );
+        opacity: 0.84;
       }
 
       .bubble::after {
-        inset: 4%;
-        border: 1px solid rgba(255, 255, 255, 0.34);
-        border-right-color: rgba(173, 211, 255, 0.45);
-        border-bottom-color: rgba(239, 189, 231, 0.45);
+        top: 13%;
+        left: 17%;
+        width: 34%;
+        height: 12%;
         border-radius: 50%;
-        transform: rotate(-24deg);
+        background: radial-gradient(
+          ellipse,
+          rgba(255, 255, 255, 0.78) 0%,
+          rgba(255, 255, 255, 0.32) 44%,
+          transparent 100%
+        );
+        filter: blur(1px);
+        transform: rotate(-32deg);
       }
       .error-header {
         width: min(75rem, 92%);
@@ -361,8 +372,8 @@
         "(prefers-reduced-motion: reduce)",
       );
       const bubbleSizes = [
-        92, 126, 74, 108, 138, 82, 116, 98, 68, 132, 86, 104,
-        144, 78, 112, 124, 72, 102, 136, 88, 118, 66, 96, 128,
+        150, 190, 112, 170, 210, 128, 184, 156, 104, 198, 138, 164,
+        220, 118, 176, 188, 110, 160, 206, 132, 180, 100, 152, 194,
       ];
       const bubbles = bubbleSizes.map((size, index) => {
         const element = document.createElement("span");
@@ -391,7 +402,7 @@
       const center = () => ({ x: innerWidth / 2, y: innerHeight / 2 });
       const goldenAngle = Math.PI * (3 - Math.sqrt(5));
       const initialBubbleCount = 14;
-      const trailSpacing = 82;
+      const trailSpacing = 132;
       const maxFrameTime = 32;
       let pointer = null;
       let lastTrailPoint = null;

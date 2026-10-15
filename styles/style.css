@@ -1679,14 +1679,18 @@ body.work-page {
 
 .hero-home-clean {
   min-height: 100vh;
+  padding-bottom: 4rem;
   background: var(--soft-bg);
   background-image: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .clean-header {
   padding-top: 2rem;
+  position: relative;
+  z-index: 4;
 }
 
 .clean-nav {
@@ -1815,6 +1819,8 @@ body.work-page {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25rem;
+  position: relative;
+  z-index: 4;
 }
 
 .clean-hero-text .hero-role-line {
@@ -1845,6 +1851,8 @@ body.work-page {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .clean-hero-photo {
@@ -1854,6 +1862,59 @@ body.work-page {
   border-radius: 2rem;
   display: block;
   box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.08);
+}
+
+.hero-cleaning-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.hero-cleaning-animation {
+  position: absolute;
+  width: clamp(11rem, 20vw, 17.5rem);
+  height: clamp(9rem, 13vw, 11rem);
+  overflow: visible;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-cleaning-animation.is-playing {
+  visibility: visible;
+  animation: hero-cleaning-journey 10s linear both;
+}
+
+@keyframes hero-cleaning-journey {
+  0%,
+  3% {
+    opacity: 0;
+    transform: translateX(calc(100vw + 100%));
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateX(calc(100vw + 100%));
+  }
+
+  20%,
+  86% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(100vw + 100%));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cleaning-scene {
+    display: none;
+  }
 }
 
 @media (max-width: 56.25rem) {
